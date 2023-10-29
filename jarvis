@@ -1,0 +1,275 @@
+import pyttsx3
+import speech_recognition as sr
+import wikipedia
+import datetime
+import webbrowser 
+import googlesearch
+import os
+# fro here this is not my code this is copy 
+import pyaudio
+import struct
+import math
+
+
+
+
+
+
+
+INITIAL_TAP_THRESHOLD = 0.5
+FORMAT = pyaudio.paInt16
+SHORT_NORMALIZE = (1.0/32768.0)
+CHANNELS = 2
+RATE = 44100  
+INPUT_BLOCK_TIME = 0.05
+INPUT_FRAMES_PER_BLOCK = int(RATE*INPUT_BLOCK_TIME)
+OVERSENSITIVE = 15.0/INPUT_BLOCK_TIME                    
+UNDERSENSITIVE = 120.0/INPUT_BLOCK_TIME 
+MAX_TAP_BLOCKS = 0.15/INPUT_BLOCK_TIME
+
+
+
+def get_rms( block ):
+    count = len(block)/2
+    format = "%dh"%(count)
+    shorts = struct.unpack( format, block )
+    sum_squares = 0.0
+    for sample in shorts:
+        n = sample * SHORT_NORMALIZE
+        sum_squares += n*n
+
+    return math.sqrt( sum_squares / count )
+
+class TapTester(object):
+
+    def __init__(self):
+        self.pa = pyaudio.PyAudio()
+        self.stream = self.open_mic_stream()
+        self.tap_threshold = INITIAL_TAP_THRESHOLD
+        self.noisycount = MAX_TAP_BLOCKS+1 
+        self.quietcount = 0 
+        self.errorcount = 0
+
+    def stop(self):
+        self.stream.close()
+
+    def find_input_device(self):
+        device_index = None            
+        for i in range( self.pa.get_device_count() ):     
+            devinfo = self.pa.get_device_info_by_index(i)   
+            # print( "Device %d: %s"%(i,devinfo["name"]) )
+
+            for keyword in ["mic","input"]:
+                if keyword in devinfo["name"].lower():
+                    # print( "Found an input: device %d - %s"%(i,devinfo["name"]) )
+                    device_index = i
+                    return device_index
+
+        if device_index == None:
+            print( "No preferred input found; using default input device." )
+
+        return device_index
+
+    def open_mic_stream( self ):
+        device_index = self.find_input_device()
+
+        stream = self.pa.open(   format = FORMAT,
+                                 channels = CHANNELS,
+                                 rate = RATE,
+                                 input = True,
+                                 input_device_index = device_index,
+                                 frames_per_buffer = INPUT_FRAMES_PER_BLOCK)
+
+        return stream
+    
+    def listen(self):
+        
+        try:
+            block = self.stream.read(INPUT_FRAMES_PER_BLOCK)
+
+        except IOError as e:
+            self.errorcount += 1
+            print( "(%d) Error recording: %s"%(self.errorcount,e) )
+            self.noisycount = 1
+            return
+
+        amplitude = get_rms( block )
+        
+        if amplitude > self.tap_threshold:
+            self.quietcount = 0
+            self.noisycount += 1
+            if self.noisycount > OVERSENSITIVE:
+
+                self.tap_threshold *= 1.1
+        else:            
+
+            if 1 <= self.noisycount <= MAX_TAP_BLOCKS:
+                return "True-Mic"
+            self.noisycount = 0
+            self.quietcount += 1
+            if self.quietcount > UNDERSENSITIVE:
+                self.tap_threshold *= 2
+
+def Tester():
+
+    tt = TapTester()
+
+    while True:
+        kk = tt.listen()
+        if "True-Mic" == kk:
+            print("jarvis is hear sir")
+            break
+
+Tester()
+#not my code 
+
+
+
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+engine.setProperty('voices',voices[1].id)
+#print(voices[1].id)
+
+def speak(audio):
+   engine.say(audio)
+   engine.runAndWait()
+
+def wishMe():
+    hour = int(datetime.datetime.now().hour)
+    if hour>=0 and hour<12:
+         speak("jarvis is hear sir good morning tanish sir ,welcome")
+
+    elif hour>=12 and hour<17:
+        speak("jarvis is hear sir helloo good aftenoon tanish sir  ,welcome")
+
+    elif hour>=17 and hour<22:
+      speak("jarvis is hear sir good evining tanish sir, welcome  ")
+    else:
+        speak("jarvis is hear sir good night tanish sir sleep a good night")
+def takecommand():
+       r = sr.Recognizer()
+       with sr.Microphone() as source:
+        print("listening....................")
+     
+        speak("yes sir speak")
+        r.pause_threshold = 5 
+        audio = r.listen(source,0,7)
+           
+        try:
+          
+            print(" wait karoge sir ")
+            query = r.recognize_google(audio,language='en-in')
+            
+            print(f"you said:{query}\n")
+            speak("ok sir")
+        except Exception as e:
+             speak("please speak again............")    
+             print("please speak again............")
+             return "None"
+        
+
+        return query
+if __name__ == "__main__":
+    wishMe()
+    while True:
+        query = takecommand().lower()
+        if 'wikipedia' in query:
+            speak('searching...')
+            query = query.replace("wikipedia","")
+            results = wikipedia.summary(query,sentences=4)
+            speak(f"ok{results}")     
+        elif 'youtube ' in query:
+            webbrowser.open("youtube.com")
+            speak("ok now sir ") 
+        elif 'Trucaller ' in query:
+            webbrowser.open("truecaller.com")
+            speak("ok now sir ") 
+        elif 'whatsapp ' in query:
+            webbrowser.open("https://web.whatsapp.com//")
+            speak("ok now sir ")        
+        elif ' Instagram' in query:
+            webbrowser.open("https://www.instagram.com//")
+            speak("ok now sir ") 
+        elif 'snapchat' in query:
+            webbrowser.open("https://www.snapchat.com//")
+            speak("ok now sir ") 
+        elif ' Google ' in query:
+            webbrowser.open ("google.com")
+            speak("ok now sir ") 
+        elif 'gmail ' in query:
+            webbrowser.open("gmail.com")
+            speak("ok now sir ") 
+       
+        elif 'coding time' in query:
+            codePath = "a\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            os.startfile(codePath)        
+        elif 'movie time' in query:
+            movie = "C:\\Users\\tanish\Videos\\Captures"
+            os.startfile(movie)
+        elif 'plan ' in query:
+             webbrowser.open("https://calendar.google.com/calendar/u/0/r")
+             speak("ok sir i will")
+        elif 'time table ' in query:
+             webbrowser.open("https://docs.google.com/document/d/1ptEb30nZxz2P-uKjZkLpzhGCZoZAK2_gS27FlycFtO8/edit#heading=h.h4kgoop6fffj")
+             speak("ok sir i will")
+        elif 'open AI ' in query:
+             webbrowser.open("https://chat.openai.com/")
+             speak("ok sir now")
+        elif 'hello jarvis' in query:
+            speak("hi tanish sir") 
+
+           
+        elif 'jarvis mera name ' in query:
+            speak("your name is Tanish ,sir ") 
+               
+        elif 'who are you' in query:
+            speak("I am JARVIS your assistant") 
+          
+                  
+        elif 'tum kon ho' in query:
+            speak("I am JARVIS your assistant")           
+        elif 'pagal' in query:
+            speak("you dooble") 
+                      
+        elif 'fool' in query:
+            speak("you mental") 
+        elif 'bye-bye jarvis' in query:
+            speak("good bye sir ")
+            speak("see you later ")
+            break
+        elif 'bye jarvis' in query:
+            speak("good bye sir ")
+            speak("see you later ")
+            break
+        elif 'good morning ' in query:
+            speak("a very good morning sir")
+        elif 'good afternoon ' in query:
+            speak(" its a very good day sir")
+        elif 'good  evening ' in query:
+            speak("I hope your day was good  sir")
+        elif 'good night ' in query:
+            speak(" i hope you already have plan for next day")
+       
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
