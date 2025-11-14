@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Tanish Tirpathi💯</h1>
-<h3 align="center">A passionate frontend developer from India</h3>
+<h3 align="center">A passionate Software developer </h3>
 <img width="200px"align+"right" src="https://imgs.search.brave.com/2FwwT551w_ZR9dF1V8_fqTB82SqePkQ0OQrEP497-HA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTEudGVub3IuY29t/L20vNkstTTFBSnBa/dFFBQUFBQy9qYXJ2/aXMuZ2lm.gif">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=tanishtirpathi&label=Profile%20views&color=0e75b6&style=flat" alt="tanishtirpathi" /> </p>
 
