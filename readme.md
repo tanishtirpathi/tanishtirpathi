@@ -1,35 +1,74 @@
-# Hi there, I'm Tanish Tirpathi! 👋
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=Tanish%20Tirpathi&fontSize=70" />
-</div>
-
-### 💫 About Me:
-I am a passionate **Full Stack Developer** specializing in the **MERN Stack**. I love building scalable web applications and solving complex problems with elegant code.
-
-- 🔭 I’m currently working on **Full Stack Projects**
-- 🌱 I’m currently learning **Advanced Backend Patterns & Cloud Deployment**
-- 💬 Ask me about **React, Node.js, or MongoDB**
-- 📫 How to reach me: **[your-email@example.com]**
-
----
-
-### 🛠 Languages and Tools:
-<p align="left">
-  <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" />
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
-  <br>
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+<h1 align="center">
+  Hey 👋 This is <span style="color:cyan;">Tanish Tirpathi 🥂</span>
+</h1>
+<img src="https://i.pinimg.com/736x/3f/83/0a/3f830a04b6a19562bc43705f13c259c7.jpg" width="100%"  style="transform: rotate(270deg);" />
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=tanishtirpathi&label=Profile%20Views&color=0e75b6&style=flat" />
 </p>
 
 ---
 
-### 📊 GitHub Stats:
+<table>
+<tr>
+<td width="65%">
+
+### 💫 About Me
+
+I’m a **Full Stack Developer** focused on building scalable, clean, and production-ready web applications.  
+Mostly working with **MERN**, but not boxed into it.
+
+- 🔭 Working on **real-world full stack projects**
+- 🌱 Learning **backend architecture, system design & cloud**
+- 💬 Ask me about **React, Node.js, MongoDB**
+- 📫 Reach me at: **tanishtirpathi0@gmail.com**
+
+</td>
+<td width="35%" align="center">
+
+<img src="https://i.pinimg.com/736x/72/72/56/727256b32fd3dcfe8585e055d083173a.jpg" width="220px" />
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🌐 Connect with Me
+
+<p align="left">
+  <a href="https://github.com/tanishtirpathi">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" />
+  </a>
+  <a href="https://tanishtirpathi.vercel.app">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel" />
+  </a>
+  <a href="https://www.x.com/tanishtirpathi">
+    <img src="https://img.shields.io/badge/-0A66C2?style=for-the-badge&logo=x" />
+  </a>
+</p>
+
+---
+
+### 🛠 Languages & Tools
+
+<p align="left">
+  <img src="https://img.shields.io/badge/MongoDB-4ea94b?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express-404d59?style=for-the-badge&logo=express" />
+  <img src="https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js" />
+  <br/>
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3" />
+  <img src="https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css" />
+</p>
+
+---
+
+### 📊 GitHub Stats
+
 <p align="center">
   <img width="48%" src="https://github-readme-stats.vercel.app/api?username=tanishtirpathi&show_icons=true&theme=tokyonight" />
   <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=tanishtirpathi&theme=tokyonight" />
@@ -41,8 +80,9 @@ I am a passionate **Full Stack Developer** specializing in the **MERN Stack**. I
 
 ---
 
-### 🤝 Support Me:
-<a href="https://www.buymeacoffee.com/[your-id]">
+### ☕ Support / Check This Out
+
+<a href="https://tanishtirpathi.vercel.app">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150" />
 </a>
 
@@ -51,3 +91,4 @@ I am a passionate **Full Stack Developer** specializing in the **MERN Stack**. I
 <p align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
 </p>
+<img src="https://i.pinimg.com/1200x/e2/f2/91/e2f2916a09e4c873b1774fb1f055852c.jpg" width="100%" />
