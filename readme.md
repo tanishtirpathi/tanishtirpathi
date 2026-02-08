@@ -1,7 +1,7 @@
 <h1 align="center">
   Hey 👋 This is <span style="color:cyan;">Tanish Tirpathi 🥂</span>
 </h1>
-<img src="https://i.pinimg.com/736x/3f/83/0a/3f830a04b6a19562bc43705f13c259c7.jpg" width="100%"  style="transform: rotate(270deg);" />
+<img src="https://i.pinimg.com/736x/7b/2e/31/7b2e31e6fe2807adc21e19cf656a245c.jpg" width="100%"  style="transform: rotate(270deg);" />
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=tanishtirpathi&label=Profile%20Views&color=0e75b6&style=flat" />
 </p>
