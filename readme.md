@@ -77,18 +77,5 @@ Mostly working with **MERN**, but not boxed into it.
 <p align="center">
   <img width="60%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tanishtirpathi&layout=compact&theme=tokyonight" />
 </p>
-
 ---
 
-### ☕ Support / Check This Out
-
-<a href="https://tanishtirpathi.vercel.app">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150" />
-</a>
-
----
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</p>
-<img src="https://i.pinimg.com/1200x/e2/f2/91/e2f2916a09e4c873b1774fb1f055852c.jpg" width="100%" />
