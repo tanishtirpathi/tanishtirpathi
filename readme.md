@@ -2,8 +2,8 @@
   Hey 👋 This is <span style="color:cyan;">Tanish Tirpathi 🥂</span>
 </h1>
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <img src="https://i.pinimg.com/736x/7b/2e/31/7b2e31e6fe2807adc21e19cf656a245c.jpg" width="50%%"  style="transform: rotate(270deg);" />
-   <img src="https://i.pinimg.com/736x/22/65/72/226572972038f950f5971c358ea2366a.jpg" width="50%%"  style="transform: rotate(270deg);" />
+  <img src="https://i.pinimg.com/736x/7b/2e/31/7b2e31e6fe2807adc21e19cf656a245c.jpg" width="45%"  style="transform: rotate(270deg);" />
+   <img src="https://i.pinimg.com/736x/22/65/72/226572972038f950f5971c358ea2366a.jpg" width="45%" " />
 </div>
 
 ---
